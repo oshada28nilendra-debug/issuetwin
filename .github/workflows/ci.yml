@@ -1,0 +1,53 @@
+name: Verify IssueTwin
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pip install -e '.[dev]'
+      - run: pytest -q -m 'not model'
+      - run: issuetwin rank examples/issues.csv --method tfidf --output /tmp/ranking.json
+  model-and-browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub
+          key: minilm-1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+      - run: pip install -r requirements.txt
+      - run: pip install -e '.[dev]'
+      - run: issuetwin download
+      - run: pytest -q
+      - run: issuetwin evaluate examples/issues.json examples/labels.json --dataset-note 'Authored synthetic fixture; not a real-world benchmark' --output reports/ci-evaluation.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Browser review workflow
+        run: |
+          issuetwin serve > /tmp/issuetwin-server.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8765/ >/dev/null && break; sleep 1; done
+          npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evaluation-and-screenshots
+          path: reports/

@@ -1,0 +1,25 @@
+number,title,body
+1,Password reset link expires immediately,The recovery email arrives but the reset link says expired on first click.
+2,Recovery email URL already invalid,I cannot regain access to my account: the emailed recovery token has expired before I use it.
+3,CSV export omits the final row,A table with 100 records downloads as 99 records. The last one is absent.
+4,Last record missing from spreadsheet download,Exporting the full dataset to comma separated values drops the final entry.
+5,App crashes when uploading a large avatar,Selecting a 20 MB profile photo closes the application. Small pictures work.
+6,Big profile picture kills the process,The application exits when I pick a very large image for my user icon.
+7,Keyboard focus gets trapped in modal,"After opening the help dialog, Tab never reaches the close button. Escape does not close it."
+8,Cannot dismiss help window without a mouse,Keyboard-only users are stuck inside the help popup and cannot reach its dismiss control.
+9,Notification emails arrive twice,Every new comment triggers two identical email notifications.
+10,Duplicate alerts in inbox for one reply,A single discussion response sends me the same email two times.
+11,Search ignores accented characters,Searching cafe does not find café. Accents should be folded for matching.
+12,Unaccented query misses diacritics,Typing resume cannot find résumé because search treats the accents differently.
+13,Saved timezone resets after logout,"Choose Asia/Colombo, sign out and back in. The preference reverts to UTC."
+14,Region preference lost between sessions,My selected time zone is forgotten each time I log off and return.
+15,PDF report has blank charts,The dashboard charts display correctly but the generated PDF leaves their areas empty.
+16,Graphs disappear in printable report,Export as PDF produces white boxes where the visualizations should be.
+17,Offline edits vanish on reconnect,Changes to notes made without connectivity are discarded when the network returns.
+18,Notes written without internet are lost,"After restoring a connection, my offline note changes disappear instead of syncing."
+19,Sorting prices uses alphabetical order,The price list orders 10 before 2. Values appear to be compared as text.
+20,Numbers sort like strings in cost column,Ascending cost puts 100 before 20 rather than comparing numeric amounts.
+21,Password reset email never arrives,"There is no recovery message in inbox or spam, even after an hour."
+22,CSV export swaps column headings,All rows are present but the amount and date column names are exchanged.
+23,Avatar thumbnail looks blurry,"Uploading succeeds, but the small profile image has poor resolution."
+24,Add sorting by date,Please add a date sort option; currently only price sorting is available.

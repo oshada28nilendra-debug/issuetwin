@@ -1,0 +1,122 @@
+[
+  {
+    "number": 1,
+    "title": "Password reset link expires immediately",
+    "body": "The recovery email arrives but the reset link says expired on first click."
+  },
+  {
+    "number": 2,
+    "title": "Recovery email URL already invalid",
+    "body": "I cannot regain access to my account: the emailed recovery token has expired before I use it."
+  },
+  {
+    "number": 3,
+    "title": "CSV export omits the final row",
+    "body": "A table with 100 records downloads as 99 records. The last one is absent."
+  },
+  {
+    "number": 4,
+    "title": "Last record missing from spreadsheet download",
+    "body": "Exporting the full dataset to comma separated values drops the final entry."
+  },
+  {
+    "number": 5,
+    "title": "App crashes when uploading a large avatar",
+    "body": "Selecting a 20 MB profile photo closes the application. Small pictures work."
+  },
+  {
+    "number": 6,
+    "title": "Big profile picture kills the process",
+    "body": "The application exits when I pick a very large image for my user icon."
+  },
+  {
+    "number": 7,
+    "title": "Keyboard focus gets trapped in modal",
+    "body": "After opening the help dialog, Tab never reaches the close button. Escape does not close it."
+  },
+  {
+    "number": 8,
+    "title": "Cannot dismiss help window without a mouse",
+    "body": "Keyboard-only users are stuck inside the help popup and cannot reach its dismiss control."
+  },
+  {
+    "number": 9,
+    "title": "Notification emails arrive twice",
+    "body": "Every new comment triggers two identical email notifications."
+  },
+  {
+    "number": 10,
+    "title": "Duplicate alerts in inbox for one reply",
+    "body": "A single discussion response sends me the same email two times."
+  },
+  {
+    "number": 11,
+    "title": "Search ignores accented characters",
+    "body": "Searching cafe does not find caf\u00e9. Accents should be folded for matching."
+  },
+  {
+    "number": 12,
+    "title": "Unaccented query misses diacritics",
+    "body": "Typing resume cannot find r\u00e9sum\u00e9 because search treats the accents differently."
+  },
+  {
+    "number": 13,
+    "title": "Saved timezone resets after logout",
+    "body": "Choose Asia/Colombo, sign out and back in. The preference reverts to UTC."
+  },
+  {
+    "number": 14,
+    "title": "Region preference lost between sessions",
+    "body": "My selected time zone is forgotten each time I log off and return."
+  },
+  {
+    "number": 15,
+    "title": "PDF report has blank charts",
+    "body": "The dashboard charts display correctly but the generated PDF leaves their areas empty."
+  },
+  {
+    "number": 16,
+    "title": "Graphs disappear in printable report",
+    "body": "Export as PDF produces white boxes where the visualizations should be."
+  },
+  {
+    "number": 17,
+    "title": "Offline edits vanish on reconnect",
+    "body": "Changes to notes made without connectivity are discarded when the network returns."
+  },
+  {
+    "number": 18,
+    "title": "Notes written without internet are lost",
+    "body": "After restoring a connection, my offline note changes disappear instead of syncing."
+  },
+  {
+    "number": 19,
+    "title": "Sorting prices uses alphabetical order",
+    "body": "The price list orders 10 before 2. Values appear to be compared as text."
+  },
+  {
+    "number": 20,
+    "title": "Numbers sort like strings in cost column",
+    "body": "Ascending cost puts 100 before 20 rather than comparing numeric amounts."
+  },
+  {
+    "number": 21,
+    "title": "Password reset email never arrives",
+    "body": "There is no recovery message in inbox or spam, even after an hour."
+  },
+  {
+    "number": 22,
+    "title": "CSV export swaps column headings",
+    "body": "All rows are present but the amount and date column names are exchanged."
+  },
+  {
+    "number": 23,
+    "title": "Avatar thumbnail looks blurry",
+    "body": "Uploading succeeds, but the small profile image has poor resolution."
+  },
+  {
+    "number": 24,
+    "title": "Add sorting by date",
+    "body": "Please add a date sort option; currently only price sorting is available."
+  }
+]

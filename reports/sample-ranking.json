@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-11T03:39:46.650475+00:00",
+  "method": "minilm",
+  "model": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "model_file": "onnx/model.onnx",
+    "max_tokens": 256,
+    "pooling": "attention-mask mean + L2",
+    "truncated_issue_ids": [],
+    "provider": "CPUExecutionProvider"
+  },
+  "input_sha256": "0addf488717fa9765f045e5a34a915c30f55e10917f586d998ed246a091fcc18",
+  "issue_count": 24,
+  "candidate_count": 276,
+  "top_k": 30,
+  "min_score": -1,
+  "seconds": 0.35647614700008035,
+  "warnings": [
+    "Scores are cosine similarities, not duplicate probabilities. Review every suggested pair."
+  ],
+  "issues": [
+    {
+      "id": "1",
+      "title": "Password reset link expires immediately",
+      "body": "The recovery email arrives but the reset link says expired on first click.",
+      "url": ""
+    },
+    {
+      "id": "2",
+      "title": "Recovery email URL already invalid",
+      "body": "I cannot regain access to my account: the emailed recovery token has expired before I use it.",
+      "url": ""
+    },
+    {
+      "id": "3",
+      "title": "CSV export omits the final row",
+      "body": "A table with 100 records downloads as 99 records. The last one is absent.",
+      "url": ""
+    },
+    {
+      "id": "4",
+      "title": "Last record missing from spreadsheet download",
+      "body": "Exporting the full dataset to comma separated values drops the final entry.",
+      "url": ""
+    },
+    {
+      "id": "5",
+      "title": "App crashes when uploading a large avatar",
+      "body": "Selecting a 20 MB profile photo closes the application. Small pictures work.",
+      "url": ""
+    },
+    {
+      "id": "6",
+      "title": "Big profile picture kills the process",
+      "body": "The application exits when I pick a very large image for my user icon.",
+      "url": ""
+    },
+    {
+      "id": "7",
+      "title": "Keyboard focus gets trapped in modal",
+      "body": "After opening the help dialog, Tab never reaches the close button. Escape does not close it.",
+      "url": ""
+    },
+    {
+      "id": "8",
+      "title": "Cannot dismiss help window without a mouse",
+      "body": "Keyboard-only users are stuck inside the help popup and cannot reach its dismiss control.",
+      "url": ""
+    },
+    {
+      "id": "9",
+      "title": "Notification emails arrive twice",
+      "body": "Every new comment triggers two identical email notifications.",
+      "url": ""
+    },
+    {
+      "id": "10",
+      "title": "Duplicate alerts in inbox for one reply",
+      "body": "A single discussion response sends me the same email two times.",
+      "url": ""
+    },
+    {
+      "id": "11",
+      "title": "Search ignores accented characters",
+      "body": "Searching cafe does not find caf\u00e9. Accents should be folded for matching.",
+      "url": ""
+    },
+    {
+      "id": "12",
+      "title": "Unaccented query misses diacritics",
+      "body": "Typing resume cannot find r\u00e9sum\u00e9 because search treats the accents differently.",
+      "url": ""
+    },
+    {
+      "id": "13",
+      "title": "Saved timezone resets after logout",
+      "body": "Choose Asia/Colombo, sign out and back in. The preference reverts to UTC.",
+      "url": ""
+    },
+    {
+      "id": "14",
+      "title": "Region preference lost between sessions",
+      "body": "My selected time zone is forgotten each time I log off and return.",
+      "url": ""
+    },
+    {
+      "id": "15",
+      "title": "PDF report has blank charts",
+      "body": "The dashboard charts display correctly but the generated PDF leaves their areas empty.",
+      "url": ""
+    },
+    {
+      "id": "16",
+      "title": "Graphs disappear in printable report",
+      "body": "Export as PDF produces white boxes where the visualizations should be.",
+      "url": ""
+    },
+    {
+      "id": "17",
+      "title": "Offline edits vanish on reconnect",
+      "body": "Changes to notes made without connectivity are discarded when the network returns.",
+      "url": ""
+    },
+    {
+      "id": "18",
+      "title": "Notes written without internet are lost",
+      "body": "After restoring a connection, my offline note changes disappear instead of syncing.",
+      "url": ""
+    },
+    {
+      "id": "19",
+      "title": "Sorting prices uses alphabetical order",
+      "body": "The price list orders 10 before 2. Values appear to be compared as text.",
+      "url": ""
+    },
+    {
+      "id": "20",
+      "title": "Numbers sort like strings in cost column",
+      "body": "Ascending cost puts 100 before 20 rather than comparing numeric amounts.",
+      "url": ""
+    },
+    {
+      "id": "21",
+      "title": "Password reset email never arrives",
+      "body": "There is no recovery message in inbox or spam, even after an hour.",
+      "url": ""
+    },
+    {
+      "id": "22",
+      "title": "CSV export swaps column headings",
+      "body": "All rows are present but the amount and date column names are exchanged.",
+      "url": ""
+    },
+    {
+      "id": "23",
+      "title": "Avatar thumbnail looks blurry",
+      "body": "Uploading succeeds, but the small profile image has poor resolution.",
+      "url": ""
+    },
+    {
+      "id": "24",
+      "title": "Add sorting by date",
+      "body": "Please add a date sort option; currently only price sorting is available.",
+      "url": ""
+    }
+  ],
+  "pairs": [
+    {
+      "left_id": "17",
+      "right_id": "18",
+      "score": 0.8387163479864893
+    },
+    {
+      "left_id": "5",
+      "right_id": "6",
+      "score": 0.8154902344011616
+    },
+    {
+      "left_id": "3",
+      "right_id": "4",
+      "score": 0.7555936109942603
+    },
+    {
+      "left_id": "1",
+      "right_id": "21",
+      "score": 0.7513776925214444
+    },
+    {
+      "left_id": "19",
+      "right_id": "20",
+      "score": 0.7394516173803303
+    },
+    {
+      "left_id": "13",
+      "right_id": "14",
+      "score": 0.7150231030887749
+    },
+    {
+      "left_id": "10",
+      "right_id": "9",
+      "score": 0.7099173288540291
+    },
+    {
+      "left_id": "1",
+      "right_id": "2",
+      "score": 0.6898527897259943
+    },
+    {
+      "left_id": "15",
+      "right_id": "16",
+      "score": 0.6787053324875189
+    },
+    {
+      "left_id": "23",
+      "right_id": "5",
+      "score": 0.6783189856555896
+    },
+    {
+      "left_id": "11",
+      "right_id": "12",
+      "score": 0.64764003451705
+    },
+    {
+      "left_id": "7",
+      "right_id": "8",
+      "score": 0.6140752171768684
+    },
+    {
+      "left_id": "2",
+      "right_id": "21",
+      "score": 0.6092901492768033
+    },
+    {
+      "left_id": "22",
+      "right_id": "3",
+      "score": 0.5955340573333571
+    },
+    {
+      "left_id": "23",
+      "right_id": "6",
+      "score": 0.5664594346055067
+    },
+    {
+      "left_id": "19",
+      "right_id": "24",
+      "score": 0.5662864760538723
+    },
+    {
+      "left_id": "22",
+      "right_id": "4",
+      "score": 0.5181880993290456
+    },
+    {
+      "left_id": "20",
+      "right_id": "24",
+      "score": 0.4413205713070698
+    },
+    {
+      "left_id": "10",
+      "right_id": "21",
+      "score": 0.39159248557591775
+    },
+    {
+      "left_id": "21",
+      "right_id": "9",
+      "score": 0.3720618773972333
+    },
+    {
+      "left_id": "1",
+      "right_id": "10",
+      "score": 0.356786639232775
+    },
+    {
+      "left_id": "19",
+      "right_id": "22",
+      "score": 0.33921070129575315
+    },
+    {
+      "left_id": "1",
+      "right_id": "9",
+      "score": 0.3324345304711391
+    },
+    {
+      "left_id": "16",
+      "right_id": "3",
+      "score": 0.32220023345527626
+    },
+    {
+      "left_id": "22",
+      "right_id": "24",
+      "score": 0.32102456867545487
+    },
+    {
+      "left_id": "16",
+      "right_id": "4",
+      "score": 0.3148259684097796
+    },
+    {
+      "left_id": "1",
+      "right_id": "13",
+      "score": 0.3111616706343667
+    },
+    {
+      "left_id": "14",
+      "right_id": "17",
+      "score": 0.3041081941973478
+    },
+    {
+      "left_id": "13",
+      "right_id": "18",
+      "score": 0.2788202028041346
+    },
+    {
+      "left_id": "15",
+      "right_id": "4",
+      "score": 0.26734017302800317
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-11T03:38:20.878169+00:00",
+  "dataset_note": "Authored synthetic fixture: 24 fictional issues, 10 duplicate pairs, 4 hard-negative issues. Not a real-world benchmark.",
+  "issue_count": 24,
+  "input_sha256": "0c405641fb1205b5c98c6479939cc32541eef6d1db6d574e1aee51cdd928afc4",
+  "labels_sha256": "15b49b127e63a70e2fe753e13f3a0084b597e918f255e523eda96e327e811b42",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "scikit-learn": "1.8.0",
+      "onnxruntime": "1.23.2",
+      "tokenizers": "0.22.1",
+      "huggingface-hub": "0.36.0"
+    }
+  },
+  "protocol": "All unordered pairs labelled; no label-based fitting or threshold tuning. AP groups equal-score ties; top-k ties use lexical IDs. Timings include model loading and are not steady-state benchmarks.",
+  "methods": {
+    "minilm": {
+      "model": {
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "model_file": "onnx/model.onnx",
+        "max_tokens": 256,
+        "pooling": "attention-mask mean + L2",
+        "truncated_issue_ids": [],
+        "provider": "CPUExecutionProvider"
+      },
+      "seconds_including_model_load": 0.37048053499995603,
+      "metrics": {
+        "pair_count": 276,
+        "positive_pairs": 10,
+        "average_precision": 0.890588023088023,
+        "k_requested": 10,
+        "k_effective": 10,
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.8,
+        "threshold": 0.7,
+        "confusion": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 4,
+          "tn": 265
+        },
+        "threshold_precision": 0.8571428571428571,
+        "threshold_recall": 0.6
+      },
+      "top_pairs": [
+        {
+          "left_id": "17",
+          "right_id": "18",
+          "score": 0.8387163479864893
+        },
+        {
+          "left_id": "5",
+          "right_id": "6",
+          "score": 0.8154902344011616
+        },
+        {
+          "left_id": "3",
+          "right_id": "4",
+          "score": 0.7555936109942603
+        },
+        {
+          "left_id": "1",
+          "right_id": "21",
+          "score": 0.7513776925214444
+        },
+        {
+          "left_id": "19",
+          "right_id": "20",
+          "score": 0.7394516173803303
+        },
+        {
+          "left_id": "13",
+          "right_id": "14",
+          "score": 0.7150231030887749
+        },
+        {
+          "left_id": "10",
+          "right_id": "9",
+          "score": 0.7099173288540291
+        },
+        {
+          "left_id": "1",
+          "right_id": "2",
+          "score": 0.6898527897259943
+        },
+        {
+          "left_id": "15",
+          "right_id": "16",
+          "score": 0.6787053324875189
+        },
+        {
+          "left_id": "23",
+          "right_id": "5",
+          "score": 0.6783189856555896
+        }
+      ]
+    },
+    "tfidf": {
+      "model": {
+        "model_id": "corpus-fitted TF-IDF",
+        "ngram_range": [
+          1,
+          2
+        ],
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "seconds_including_model_load": 0.00263324900004136,
+      "metrics": {
+        "pair_count": 276,
+        "positive_pairs": 10,
+        "average_precision": 0.5314559125085441,
+        "k_requested": 10,
+        "k_effective": 10,
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6,
+        "threshold": 0.7,
+        "confusion": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 10,
+          "tn": 266
+        },
+        "threshold_precision": null,
+        "threshold_recall": 0.0
+      },
+      "top_pairs": [
+        {
+          "left_id": "1",
+          "right_id": "21",
+          "score": 0.1512611531542237
+        },
+        {
+          "left_id": "5",
+          "right_id": "6",
+          "score": 0.12739241179671448
+        },
+        {
+          "left_id": "17",
+          "right_id": "18",
+          "score": 0.11851284316031693
+        },
+        {
+          "left_id": "23",
+          "right_id": "5",
+          "score": 0.117912950026551
+        },
+        {
+          "left_id": "1",
+          "right_id": "2",
+          "score": 0.1006615078433146
+        },
+        {
+          "left_id": "11",
+          "right_id": "12",
+          "score": 0.08440542709626003
+        },
+        {
+          "left_id": "3",
+          "right_id": "4",
+          "score": 0.08405846948964812
+        },
+        {
+          "left_id": "10",
+          "right_id": "21",
+          "score": 0.08064338941162427
+        },
+        {
+          "left_id": "7",
+          "right_id": "8",
+          "score": 0.07962011598475251
+        },
+        {
+          "left_id": "11",
+          "right_id": "16",
+          "score": 0.07905994709257916
+        }
+      ]
+    }
+  }
+}
