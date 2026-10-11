@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "issuetwin"
+version = "0.1.0"
+description = "Local-first duplicate issue review with MiniLM and TF-IDF"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "scikit-learn>=1.5,<2", "flask==3.1.2", "onnxruntime==1.23.2", "tokenizers==0.22.1", "huggingface-hub==0.36.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+
+[project.scripts]
+issuetwin = "issuetwin.cli:main"
+
+[tool.setuptools.package-data]
+issuetwin = ["templates/*.html", "static/*.css", "static/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: real pretrained model integration (requires cached/downloadable model)"]
+
+[tool.setuptools.packages.find]
+include = ["issuetwin*"]
